@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*,
+*::before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+}
+:root{
+   --theme: #ff6d6d;
+   --theme2: #0c2b59;
+   --text: #fff;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: #22222b;
+   height: 100vh;
+   display: grid;
+   place-items:  center;
+   padding: 0 1rem;
+   color: var(--text);
+}
+
+#loader {
+   width: 100vw;
+   height: 100vh;
+   position: fixed;
+   background: rgba(0, 0, 0, 0);
+   backdrop-filter: blur(5px);
+   top: 0;
+   left: 0;
+   display: none;
+   place-items: center;
+   z-index: 100;
+}
+
+#loader::before {
+   content: "";
+   width: 100px;
+   height: 100px;
+   border: 5px #555 solid;
+   border-radius: 50px;
+   border-color: transparent #555 transparent #555;
+   display: block;
+   animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+h1{
+   text-align: center;
+   padding: 20px;
+}
+
+form {
+   background-color: #768de848;
+   padding: 25px 20px;
+   border-radius: 10px;
+   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+   max-width: 400px;
+   width: 100%;
+}
+
+h1 {
+   color: var(--text);
+   margin-bottom: 20px;
+}
+
+label {
+   text-align: center;
+}
+
+label,
+select,
+input {
+   display: block;
+}
+
+button,
+select,
+input {
+   outline: none;
+   width: 100%;
+   padding: 10px;
+   border: none;
+   color: var(--text);
+   border-radius: 5px;
+   cursor: pointer;
+   transition-property: background-color, transform;
+   transition-duration: .2s;
+}
+
+option {
+   background-color: #fff;
+   color: var(--text);
+}
+
+input {
+   color: #000;
+}
+input:focus, input:hover{
+   background-color: #eef;
+}
+
+label{
+   padding: 10px 0;
+}
+
+select, option{
+   text-align: center;
+   background-color: var(--theme2);
+   padding: 8px;
+   font-size: .9rem;
+}
+
+select:hover {
+   background-color: var(--theme);
+   transform: scale(.97);
+}
+
+
+button {
+   background-color: var(--theme);
+   font-weight: 600;
+   text-transform: uppercase;
+   font-size: .9rem;
+}
+
+button:hover {
+   transform: scale(.97);
+   background-color: #ea4242;
+}
+
+.inputBox{
+   display: flex;
+   position: relative;
+   background-color: var(--text);
+   border-radius: 5px;
+}
+
+#amount{
+   margin: 0;
+}
+
+#symbol{
+   width: 50px;
+   color: var(--theme2);
+   display: grid;
+   place-items: center;
+   font: 500 1.1rem 'Poppins', sans-serif;
+}
+
+.result_box{
+   padding: 5px 0;
+}
+.result_box p {
+   display: flex;
+   justify-content: space-between;
+   padding: 5px 0;
+}
