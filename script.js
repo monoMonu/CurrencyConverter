@@ -1,7 +1,5 @@
-// https://api.currencybeacon.com/v1/convert
-// api_key =  O05Xi52up1zRuOANF4a7YgSQcTvdnaRT
 
-const api_key = 'O05Xi52up1zRuOANF4a7YgSQcTvdnaRT';
+import {api_key} from './config.js'
 const baseUrl = (endpoint) => `https://api.currencybeacon.com/v1/${endpoint}?api_key=${api_key}`;
 
 const fetchData = async (url) =>{
@@ -63,7 +61,7 @@ convertBtn.addEventListener('click', async () => {
    }
    const rate = await determineRate(fromCurrency.value, toCurrency.value);
    const amt = amount.value;
-   let currencySymbol;
+   let toCurrencySymbol;
    Object.keys(currencyData).forEach( el => {
       if(currencyData[el].short_code==toCurrency.value){
          toCurrencySymbol = currencyData[el].symbol;

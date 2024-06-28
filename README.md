@@ -1,6 +1,8 @@
-# Currency Converter
+# Currency Converter 💵
 
-- This is a Currency Converter that converts the given amount from one currency to another as per the user selections.
-- It uses third-party API(CurrencyBeacon's API) to fetch real-time exchange rates of all currencies over the world.
-- It provides the current rate of exchange as well.
+- This is a currency converter, which uses currency beacon api to fetch current exchange rates for currencies all over the world.
+
+- Get current exchange rates and converted amounts
+
+- Easy to use and Cool UI
 
