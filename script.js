@@ -74,3 +74,6 @@ convertBtn.addEventListener('click', async () => {
    rate_box.innerText = ` ${toCurrencySymbol} ${rate.toFixed(2)} `;
    result_amount.innerText = `${toCurrencySymbol} ${(amt*rate).toFixed(2)} `;
 })
+
+// Disable right click
+window.addEventListener('contextmenu', (e)=> e.preventDefault());
